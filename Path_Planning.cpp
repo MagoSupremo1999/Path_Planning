@@ -4,7 +4,7 @@
    = Desenvolvido por Vinícius Alves e Lucas Figueiras                                          =
    ============================================================================================== */
    
-#include <SFML/Window.hpp>                                                              //Declaração das bibliotecas
+#include <SFML/Window.hpp>                                          //Declaração das bibliotecas
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <stdlib.h>
@@ -21,12 +21,6 @@ int main(){
 
     sf::RectangleShape rectangle(sf::Vector2f(Window_Sizex, Window_Sizey));             //Gera o fundo verde (campo)
     rectangle.setFillColor(sf::Color::Green);
-
-    alpha = (end_y - start_y)/(end_x - start_x);                    //Definição do coeficiente angular
-    beta = 8*(start_y - start_x * alpha);                           //Definição do coeficiente linear
-    sen = (end_y - start_y)/sqrt((end_y - start_y)*(end_y - start_y) + (end_x - start_x)*(end_x - start_x));    //Definição do seno   
-    cos = (end_x - start_x)/sqrt((end_y - start_y)*(end_y - start_y) + (end_x - start_x)*(end_x - start_x));    //Definição do cosseno
-    limite = 18/sen;                                                //Definição do limite mínimo de distância aos obstáculos
 
     srand(time(NULL));                                              //Configura a função rand()
 
